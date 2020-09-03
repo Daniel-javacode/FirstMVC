@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8"/>
+    <title>MVC</title>
+    <style>
+        table th, table td {
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+<table border=1>
+    <p th:text="${title}"></p>
+    <tr>
+        <th>No</th>
+        <th>Mark</th>
+        <th>Model</th>
+    </tr>
+
+    <tr th:each="car : ${cars}">
+
+        <td th:utext="${car.getNumber()}">No</td>
+        <td th:utext="${car.getMark()}">Mark</td>
+        <td th:utext="${car.getModel()}">Model</td>
+
+    </tr>
+
+</table>
+
+</body>
+</html>
